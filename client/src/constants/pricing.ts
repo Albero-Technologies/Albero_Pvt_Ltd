@@ -22,7 +22,7 @@ const plans = [
         name: 'WordPress',
         tag: 'Standard',
         info: 'Flexible CMS for blogs, business, and e-commerce',
-        price: Lets connect over call,
+        price: 300,
         features: [
             { text: 'Custom WordPress theme design & setup' },
             { text: 'Up to 10 pages with CMS editing' },
@@ -42,7 +42,7 @@ const plans = [
         name: 'MERN Stack',
         tag: 'Most Popular',
         info: 'Best for startups & businesses scaling fast',
-        price: Lets connect over call,
+        price: 1800,
         features: [
             { text: 'Full-stack app with MongoDB, Express, React, Node.js' },
             { text: 'Dynamic pages with CMS or admin panel' },
@@ -63,7 +63,7 @@ const plans = [
         name: 'Laravel Advanced',
         tag: 'Enterprise',
         info: 'Enterprise-grade solution with PHP & Laravel',
-        price: 'Lets connect over call',
+        price: 600,
         features: [
             { text: 'Custom Laravel backend with scalable architecture' },
             { text: 'Advanced e-commerce (multi-vendor, subscriptions)' },
