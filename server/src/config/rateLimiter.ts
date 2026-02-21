@@ -4,8 +4,8 @@ import { Pool } from 'pg'
 
 export let rateLimiterPostgres: RateLimiterPostgres | null = null
 
-const DURATION = 60 // 60 seconds
-const POINTS = 10 // 10 requests
+const DURATION = 1000 // 180 seconds
+const POINTS = 3600 // 20 requests
 
 export const initRateLimiter = (databaseUrl: string): void => {
     if (!databaseUrl) {
