@@ -10,11 +10,11 @@ import { NavLink } from '../user/common/NavLink'
 type CURRENCY = 'USD' | 'EUR' | 'INR'
 const currencies: CURRENCY[] = ['USD', 'EUR', 'INR']
 
-const currencyRates: Record<CURRENCY, number> = {
-    USD: 1,
-    EUR: 0.85,
-    INR: 83.0
-}
+// const currencyRates: Record<CURRENCY, number> = {
+//     USD: 1,
+//     EUR: 0.85,
+//     INR: 83.0
+// }
 
 interface Plan {
     name: string
@@ -37,16 +37,16 @@ interface PricingSectionProps extends React.ComponentProps<'div'> {
     setCurrency: React.Dispatch<React.SetStateAction<CURRENCY>>
 }
 
-export function PricingSection({ plans, currency, setCurrency, ...props }: PricingSectionProps) {
+export function PricingSection({ plans, currency, ...props }: PricingSectionProps) {
     return (
         <div
             className={cn('flex w-full flex-col items-center justify-center space-y-5 p-4', props.className)}
             {...props}>
             {/* Currency Toggle Only */}
-            <CurrencySelector
+            {/* <CurrencySelector
                 currency={currency}
                 setCurrency={setCurrency}
-            />
+            /> */}
 
             {/* Pricing Cards */}
             <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -96,17 +96,17 @@ type PricingCardProps = React.ComponentProps<'div'> & {
     currency?: CURRENCY
 }
 
-export function PricingCard({ plan, className, currency = 'USD', ...props }: PricingCardProps) {
-    const convertedPrice = plan.price * currencyRates[currency]
+export function PricingCard({ plan, className, ...props }: PricingCardProps) {
+    // const convertedPrice = plan.price * currencyRates[currency]
 
-    const formatPrice = (price: number, currency: CURRENCY) => {
-        return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency,
-            minimumFractionDigits: currency === 'USD' || currency === 'EUR' ? 2 : 0,
-            maximumFractionDigits: currency === 'INR' ? 0 : 2
-        }).format(price)
-    }
+    // const formatPrice = (price: number, currency: CURRENCY) => {
+    //     return new Intl.NumberFormat('en-US', {
+    //         style: 'currency',
+    //         currency,
+    //         minimumFractionDigits: currency === 'USD' || currency === 'EUR' ? 2 : 0,
+    //         maximumFractionDigits: currency === 'INR' ? 0 : 2
+    //     }).format(price)
+    // }
 
     return (
         <div
@@ -133,9 +133,9 @@ export function PricingCard({ plan, className, currency = 'USD', ...props }: Pri
                 <div className="text-lg font-medium text-white">{plan.name}</div>
                 {plan.tag && <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">{plan.tag}</p>}
                 <p className="text-white text-sm font-normal">{plan.info}</p>
-                <h3 className="mt-2 flex items-end gap-1">
+                {/* <h3 className="mt-2 flex items-end gap-1">
                     <span className="text-3xl font-bold text-white">{formatPrice(convertedPrice, currency)}</span>
-                </h3>
+                </h3> */}
             </div>
             <div className="text-white space-y-4 px-4 py-6 text-sm">
                 {plan.features.map((feature, index) => (

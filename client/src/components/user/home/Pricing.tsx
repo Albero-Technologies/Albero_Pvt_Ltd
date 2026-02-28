@@ -10,7 +10,7 @@ export default function Pricing() {
     return (
         <section
             id="pricing"
-            className="w-full overflow-hidden bg-black py-12 md:py-20">
+            className="w-full overflow-hidden bg-black py-8 md:py-20">
             <div className="text-center mb-16">
                 <Badge
                     variant="outline"
@@ -29,7 +29,7 @@ export default function Pricing() {
             />
 
             {/* Add-On Services */}
-            <AddOnServices currency={currency} />
+            <AddOnServices />
         </section>
     )
 }

@@ -8,30 +8,30 @@ export const featuresData = [
     {
         card2: {
             title: 'Secure by default',
-            subtitle: ' Provident fugit and vero voluptate. magnam magni doloribus dolores voluptates a sapiente nisi.'
+            subtitle: 'Enterprise-grade security with encrypted data protection and secure authentication systems.'
         }
     },
     {
         card3: {
-            title: 'Faster than light',
-            subtitle: 'Provident fugit vero voluptate. magnam magni doloribus dolores voluptates inventore nisi.'
+            title: 'Reliable Performance',
+            subtitle: 'Scalable, stable, and efficient systems built to support long-term business growth.'
         }
     },
     {
         card4: {
-            title: 'Faster than light',
-            subtitle: 'Provident fugit vero voluptate. Voluptates a sapiente inventore nisi.'
+            title: 'Reliable Performance',
+            subtitle: 'Scalable, stable, and efficient systems built to support long-term business growth.'
         }
     },
     {
         card5: {
             title: 'Keep your loved ones safe',
-            subtitle: 'Voluptate. magnam magni doloribus dolores voluptates a sapiente inventore nisi.',
-            avatarName1: 'Likeur',
+            subtitle: 'Advanced data protection ensuring privacy, safety, and trusted digital environments.',
+            avatarName1: 'Rahul',
             avatar1: 'https://avatars.githubusercontent.com/u/102558960?v=4',
-            avatarName2: 'M. Irung',
+            avatarName2: 'Amit',
             avatar2: 'https://avatars.githubusercontent.com/u/47919550?v=4',
-            avatarName3: 'B. Ng',
+            avatarName3: 'Arjun',
             avatar3: 'https://avatars.githubusercontent.com/u/31113941?v=4'
         }
     }

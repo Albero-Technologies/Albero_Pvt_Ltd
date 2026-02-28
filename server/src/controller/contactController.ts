@@ -3,10 +3,10 @@ import httpResponse from '../util/httpResponse'
 import responseMessage from '../constant/responseMessage'
 import httpError from '../util/httpError'
 import prisma from '../util/prisma'
-import { transporter } from '../util/transporter'
-import { generateWelcomeEmail } from '../mails/welcome'
-import { generateNotificationEmail } from '../mails/notification'
-import config from '../config/config'
+// import { transporter } from '../util/transporter'
+// import { generateWelcomeEmail } from '../mails/welcome'
+// import { generateNotificationEmail } from '../mails/notification'
+// import config from '../config/config'
 
 interface ContactBody {
     name: string
@@ -28,21 +28,21 @@ export default {
                 data: { name, email, phone, message }
             })
 
-            // Send Welcome Email to User
-            await transporter.sendMail({
-                from: config.EMAIL_USER,
-                to: email,
-                subject: 'We received your message – Albero',
-                html: generateWelcomeEmail({ name, email, message })
-            })
+            // // Send Welcome Email to User
+            // await transporter.sendMail({
+            //     from: config.EMAIL_USER,
+            //     to: email,
+            //     subject: 'We received your message – Albero',
+            //     html: generateWelcomeEmail({ name, email, message })
+            // })
 
-            // Send Notification Email to Admin
-            await transporter.sendMail({
-                from: config.EMAIL_USER,
-                to: config.ADMIN_EMAIL,
-                subject: `New Contact Submission from ${name}`,
-                html: generateNotificationEmail({ name, email, phone: phone || '', message })
-            })
+            // // Send Notification Email to Admin
+            // await transporter.sendMail({
+            //     from: config.EMAIL_USER,
+            //     to: config.ADMIN_EMAIL,
+            //     subject: `New Contact Submission from ${name}`,
+            //     html: generateNotificationEmail({ name, email, phone: phone || '', message })
+            // })
 
             return httpResponse(req, res, 200, responseMessage.SUCCESS, contact)
         } catch (err) {

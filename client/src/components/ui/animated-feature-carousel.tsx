@@ -371,7 +371,17 @@ export function FeatureCarousel({
         }
     }
     return (
-        <div className="flex flex-col gap-12 w-full max-w-4xl mx-auto">
+        <div className="flex flex-col gap-8 w-full max-w-4xl mx-auto">
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}>
+                <StepsNav
+                    current={step}
+                    onChange={setStep}
+                    steps={steps}
+                />
+            </motion.div>
             <FeatureCard
                 {...props}
                 step={step}>
@@ -384,16 +394,6 @@ export function FeatureCarousel({
                     </motion.div>
                 </AnimatePresence>
             </FeatureCard>
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}>
-                <StepsNav
-                    current={step}
-                    onChange={setStep}
-                    steps={steps}
-                />
-            </motion.div>
         </div>
     )
 }
