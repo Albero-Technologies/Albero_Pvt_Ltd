@@ -1,7 +1,7 @@
 import dotenvFlow from 'dotenv-flow'
 
 // Load .env files ONLY in development
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.ENV !== 'production') {
   dotenvFlow.config()
 }
 
